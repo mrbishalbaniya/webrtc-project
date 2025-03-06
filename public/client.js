@@ -1,4 +1,4 @@
-const socket = io('https://webrtc-signaling-server-pqjf.onrender.com');
+const socket = io('https://webrtc-signaling-server-3za6.onrender.com');
 
 // Get video elements
 const localVideo = document.getElementById('localVideo');

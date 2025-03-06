@@ -1,4 +1,4 @@
-const socket = io('http://localhost:3000');
+const socket = io('https://wrcvc.netlify.app/');
 
 // Get video elements
 const localVideo = document.getElementById('localVideo');

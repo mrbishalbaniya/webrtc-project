@@ -23,5 +23,5 @@ io.on('connection', (socket) => {
 });
 
 server.listen(3000, () => {
-    console.log('Signaling server running on http://localhost:3000');
+    console.log('Signaling server running on https://wrcvc.netlify.app/');
 });

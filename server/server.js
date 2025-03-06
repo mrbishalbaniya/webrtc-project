@@ -4,16 +4,20 @@ const { Server } = require('socket.io');
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server);
 
-// Serve static files from the "public" folder
-app.use(express.static('../public'));
+// Configure CORS for Socket.IO
+const io = new Server(server, {
+    cors: {
+        origin: 'http://127.0.0.1:5500', // Allow requests from your frontend
+        methods: ['GET', 'POST'],
+    },
+});
 
 io.on('connection', (socket) => {
     console.log('A user connected:', socket.id);
 
-    // Relay signaling messages between peers
     socket.on('signal', (data) => {
+        console.log('Received signal:', data);
         socket.broadcast.emit('signal', data);
     });
 

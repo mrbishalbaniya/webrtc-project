@@ -1,4 +1,4 @@
-const socket = io('https://wrcvc.netlify.app/');
+const socket = io('https://webrtc-signaling-server-pqjf.onrender.com');
 
 // Get video elements
 const localVideo = document.getElementById('localVideo');
